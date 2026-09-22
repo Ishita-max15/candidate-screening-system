@@ -2,7 +2,7 @@
 
 A full-stack web application that conducts intelligent, personalised technical interviews using **Retrieval-Augmented Generation (RAG)**. Candidates upload their résumé, select a target role, and receive a fully customised AI-driven interview — grounded in role-specific knowledge from real textbooks.
 
-Built as part of the **PGAGI AI/ML & Backend Engineering Internship** assignment.
+
 
 ---
 
