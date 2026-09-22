@@ -326,6 +326,4 @@ Embeddings persist in `backend/chroma_db/` between restarts.
 
 ---
 
-## Author
 
-**Thanuj Raja** — [thanujraja1234@gmail.com](mailto:thanujraja1234@gmail.com)
