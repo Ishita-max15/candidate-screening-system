@@ -58,7 +58,7 @@ async def parse_resume(path: str | Path) -> ParsedResume:
     try:
         message = await client.chat.completions.create(
             model=settings.llm_model,
-            max_tokens=1024,
+            max_tokens=2048,
             messages=[{"role": "user", "content": prompt}],
         )
         raw_json = message.choices[0].message.content.strip()

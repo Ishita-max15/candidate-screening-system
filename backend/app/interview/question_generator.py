@@ -36,7 +36,7 @@ async def generate_question(
     client = AsyncOpenAI(api_key=settings.llm_api_key, base_url=settings.llm_base_url, timeout=30.0)
     message = await client.chat.completions.create(
         model=settings.llm_model,
-        max_tokens=512,
+        max_tokens=2048,
         temperature=settings.llm_temperature,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -53,7 +53,7 @@ async def generate_follow_up(original_question: str, candidate_answer: str) -> s
     client = AsyncOpenAI(api_key=settings.llm_api_key, base_url=settings.llm_base_url, timeout=30.0)
     message = await client.chat.completions.create(
         model=settings.llm_model,
-        max_tokens=256,
+        max_tokens=1024,
         temperature=0.5,
         messages=[{"role": "user", "content": prompt}],
     )

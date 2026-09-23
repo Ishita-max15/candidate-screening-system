@@ -29,7 +29,7 @@ async def generate_report(
     client = AsyncOpenAI(api_key=settings.llm_api_key, base_url=settings.llm_base_url, timeout=60.0)
     message = await client.chat.completions.create(
         model=settings.llm_model,
-        max_tokens=2048,  # report JSON is large — 1024 cuts it off mid-JSON
+        max_tokens=4096,  # report JSON is large, and gpt-oss reasoning eats into the budget too
         temperature=0.3,
         messages=[{"role": "user", "content": prompt}],
     )
